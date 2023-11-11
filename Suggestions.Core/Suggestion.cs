@@ -1,6 +1,6 @@
-﻿namespace Suggestions
+﻿namespace Suggestions.Core
 {
-    public class Suggestions
+    public class Suggestion:ISuggestion
     {
         public IEnumerable<string> GetSuggestions(string term, IEnumerable<string> choices, int numbersofSuggestions)
         {

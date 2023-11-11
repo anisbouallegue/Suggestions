@@ -1,20 +1,21 @@
-using NUnit.Framework;
-using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Suggestions.Core;
 
-namespace SuggestionsTest
+
+namespace Suggestions.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class IAmTheTest
     {
         [TestMethod]
         public void GetSuggestions_ShouldReturnCorrectOrderedSuggestions()
         {
-            var assistant = new Suggestions.Suggestions();
+            ISuggestion suggestion = new Suggestion();
             var choices = new List<string>()
             {
                 "gros","gras","graisse","aggressif","go","ros","gro"
             };
-            var suggestions = assistant.GetSuggestions("gros", choices, 2);
+            var suggestions = suggestion.GetSuggestions("gros", choices, 2);
             Assert.AreEqual(2, suggestions.Count());
             Assert.AreEqual("gros", suggestions.ElementAt(0));
             Assert.AreEqual("gras", suggestions.ElementAt(1));
@@ -24,12 +25,12 @@ namespace SuggestionsTest
         [TestMethod]
         public void GetSuggestions_ShouldReturnEmptyListIfNoSuggestionsFound()
         {
-            var assistant = new Suggestions.Suggestions();
+            ISuggestion suggestion = new Suggestion();
             var choices = new List<string>()
             {
                 "apple","banana","cherry"
             };
-            var suggestions = assistant.GetSuggestions("orange", choices, 2);
+            var suggestions = suggestion.GetSuggestions("orange", choices, 2);
             Assert.AreEqual(0, suggestions.Count());
         }
     }

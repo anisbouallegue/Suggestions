@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suggestions", "Suggestions\Suggestions.csproj", "{31690392-1A09-4B3A-915B-CBC80064E699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suggestions", "Suggestions.Core\Suggestions.Core.csproj", "{31690392-1A09-4B3A-915B-CBC80064E699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuggestionsTest", "SuggestionsTest\SuggestionsTest.csproj", "{15C33904-EE23-4A5D-B598-1B59A5178851}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suggestions", "Suggestions.Tests\Suggestions.Tests.csproj", "{15C33904-EE23-4A5D-B598-1B59A5178851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
